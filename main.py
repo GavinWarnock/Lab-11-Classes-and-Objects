@@ -1,12 +1,6 @@
-from alarm_clock import AlarmClock
+from person import Person
+person_one = Person("Hank", 100)
+person_two = Person("Gavin", 200)
 
-my_alarm_clock = AlarmClock()
-
-my_alarm_clock.change_time("6")
-print(my_alarm_clock.current_time)
-
-my_alarm_clock.alarm_toggle
-print(my_alarm_clock.alarm_on)
-
-my_alarm_clock.set_alarm("6")
-print(my_alarm_clock.alarm_set_to)
+funds_to_transfer = person_one.send_funds(50)
+person_two.receive_funds(person_one, funds_to_transfer)
